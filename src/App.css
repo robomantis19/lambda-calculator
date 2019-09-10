@@ -20,3 +20,27 @@
     padding-right: 8%;
     font-size: 5.0rem;
   }
+  /* .button span{
+      width: 10px;
+      height: 10px;
+      background-color: blue;
+      border : 2px solid blue;
+      border-radius: 3rem;
+      color: white;
+  } */
+  .buttonContainer{
+      margin-right: 20px;
+      height: 100px;
+      width: 300px;
+  }
+  .sideways{
+      display: flex;
+      align-items: flex-start;
+  }
+  /* .button{
+      width: 100px;
+      height: 100px;
+  } */
+  .OperatorContainer{
+      margin-top: -100px;
+  }
