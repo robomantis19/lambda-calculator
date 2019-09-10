@@ -2,12 +2,13 @@ import React from "react";
 
 const styles = {
   color: "white",
-  backgroundColor: "blue",
-  border: "2px solid blue", 
+  backgroundColor: " #2276bf",
+  border: "2px solid  #2276bf", 
   width: "80px",
   height: "80px",
   margin: "10px",
   borderRadius: "50px",
+  boxShadow: "1px 6px #322c2d",
   
   // display: "flex",
   // flexDirection: "column",
