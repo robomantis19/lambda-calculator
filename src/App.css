@@ -1,12 +1,16 @@
 .container {
-    background-color: #c00025;
+    margin-left: 30%;
+    
+    background-color: #b6003b;
     width: 100%;
     max-width: 550px;
     border-radius: 15px;
     border: 2px solid grey;
     padding-bottom: 25px;
+    
 }
 .display {
+    margin-left: -20px;
     margin-top: 25px;
     height: 100px;
     width: 450px;
@@ -19,4 +23,31 @@
     align-items: flex-end;
     padding-right: 8%;
     font-size: 5.0rem;
+  }
+  /* .button span{
+      width: 10px;
+      height: 10px;
+      background-color: blue;
+      border : 2px solid blue;
+      border-radius: 3rem;
+      color: white;
+  } */
+  .buttonContainer{
+      margin-right: 20px;
+      height: 100px;
+      width: 300px;
+  }
+  .App {
+      margin-left: 45px;
+  }
+  .sideways{
+      display: flex;
+      align-items: flex-start;
+  }
+  /* .button{
+      width: 100px;
+      height: 100px;
+  } */
+  .OperatorContainer{
+      margin-top: -100px;
   }
