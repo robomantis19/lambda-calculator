@@ -9,6 +9,7 @@ const styles = {
   margin: "10px",
   borderRadius: "50px",
   boxShadow: "1px 6px #322c2d",
+  fontSize: "2.5rem",
   
   // display: "flex",
   // flexDirection: "column",

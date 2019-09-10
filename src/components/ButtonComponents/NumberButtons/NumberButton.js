@@ -10,6 +10,7 @@ const styles = {
   height: "80px",
   margin: "10px",
   borderRadius: "50px",
+  fontSize: "2.5rem",
   
   boxShadow: "1px 6px #322c2d",
   
@@ -19,10 +20,12 @@ const styles = {
 
 const NumberButton = (props) => {
   console.log("NumberButton props: ", props);
+  
   return (
     <button style = {styles}>
       <span >
       {props.numbers}
+      
       </span>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
     </button>
