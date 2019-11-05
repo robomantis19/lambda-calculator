@@ -10,7 +10,7 @@ const Specials = () => {
   console.log(specials); 
   const [special, setSpecial] = useState(specials); 
   return (
-    <div>
+    <div className= "specialDiv">
       {special.map((item, index) => (
         <SpecialButton key={index} button={item}/> 
       ))}

@@ -21,10 +21,13 @@ function App() {
     <div className="container">
       
       <div className="NumberPad">
-        
-        <Numbers/>
-        <Operators/> 
+        <div>
         <Specials/>
+        <Numbers/>
+        </div>
+        <div>
+        <Operators/> 
+        </div>
         
       </div> 
       

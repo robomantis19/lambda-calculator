@@ -10,7 +10,7 @@ const Operators = () => {
   console.log(operators);
   const [operator, setOperator] = useState(operators); 
   return (
-    <div>
+    <div className="operatorsDiv">
       {operator.map((item, index) => (
         <OperatorButton key={index} button={item.char} value={item.value}/> 
       ))}
