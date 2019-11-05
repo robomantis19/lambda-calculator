@@ -3,8 +3,10 @@ import { tsPropertySignature } from "@babel/types";
 
 const NumberButton = (props) => {
   return (
-    <div>
-      {props.button}
+    <div className="Number">
+      <button className="button">
+         {props.button}
+      </button>
     </div>
   );
 };

@@ -19,13 +19,20 @@ function App() {
 
   return (
     <div className="container">
-      <Logo />
-      <Numbers/>
-      <Operators/> 
-      <Specials/> 
+      
+      <div className="NumberPad">
+        
+        <Numbers/>
+        <Operators/> 
+        <Specials/>
+        
+      </div> 
+      
       <div className="App">
-        {<Display/> 
-        /* STEP 4 - Render your components here and be sure to properly import/export all files */}
+        <Logo />
+        <Display/> 
+        
+        
       </div>
     </div>
   );
