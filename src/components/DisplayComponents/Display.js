@@ -1,8 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
+// import {numbers, specials, operators} from '../../data';
+// import NumberButton from '../ButtonComponents/NumberButtons/NumberButton';
+// import Operators from '../ButtonComponents/OperatorButtons/Operators';
+// import Specials from '../ButtonComponents/SpecialButtons/Specials';
 
-
-const Display = () => {
-  return <div className="display">{ /* Display any props data here */}</div>;
+const Display = (props) => {
+  // const [display, setDisplay] = useState([NumberButton]); 
+  return (
+      <div className="display">
+        {/* {display}  */}
+  
+  
+      </div>
+  )
 };
 
 export default Display;
