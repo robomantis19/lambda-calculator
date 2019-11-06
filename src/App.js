@@ -13,14 +13,21 @@ import NumberButton from './components/ButtonComponents/NumberButtons/NumberButt
 import Logo from "./components/DisplayComponents/Logo";
 
 function App() {
-  const [numerals, setNumerals] = useState(0)
+  const [numerals, setNumerals] = useState([])
+  const [operator, setOperator] = useState([])
+  const [calc, setCalc] = useState([])
   console.log('numerals: ', numerals); 
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
   // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
   // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
-
+  
+  const addition = (operator) => { 
+    const previous = Number(numerals[1])
+    const array = [previous, Number(numerals), operator]
+    return [operator, numerals]
+  }
   return (
     <div className="container">
       
@@ -30,14 +37,14 @@ function App() {
         <Numbers display={setNumerals}/>
         </div>
         <div>
-        <Operators/> 
+        <Operators setOperator={setOperator}/> 
         </div>
         
       </div> 
       
       <div className="App">
         <Logo />
-        <Display display={numerals}/> 
+        <Display display={addition} operator1= {operator}/> 
         
         
       </div>

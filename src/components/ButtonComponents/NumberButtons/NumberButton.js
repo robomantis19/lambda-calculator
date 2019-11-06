@@ -11,7 +11,7 @@ const NumberButton = (props) => {
      
     <div className="Number">
       
-      <button className="button" onClick={() => props.display(props.button)}>
+      <button className="button" onClick={() => props.display(numerals => numerals += Number(props.button))}>
          {props.button}
          
          
