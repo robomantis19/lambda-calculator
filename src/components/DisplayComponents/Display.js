@@ -8,7 +8,7 @@ const Display = (props) => {
   // const [display, setDisplay] = useState([NumberButton]); 
   return (
       <div className="display">
-        {props.display(props.operator1)}
+        {props.display(props.operator)}
   
   
       </div>

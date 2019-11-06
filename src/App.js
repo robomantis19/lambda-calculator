@@ -23,6 +23,9 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   
+  const test = () => { 
+    return setOperator();
+  }
   const addition = (operator) => { 
     const previous = Number(numerals[1])
     const array = [previous, Number(numerals), operator]
@@ -37,14 +40,14 @@ function App() {
         <Numbers display={setNumerals}/>
         </div>
         <div>
-        <Operators setOperator={setOperator}/> 
+        <Operators test={test}/> 
         </div>
         
       </div> 
       
       <div className="App">
         <Logo />
-        <Display display={addition} operator1= {operator}/> 
+        <Display display={[addition,operator]}/> 
         
         
       </div>
