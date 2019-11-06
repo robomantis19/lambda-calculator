@@ -13,7 +13,7 @@ import NumberButton from './components/ButtonComponents/NumberButtons/NumberButt
 import Logo from "./components/DisplayComponents/Logo";
 
 function App() {
-  const [numerals, setNumerals] = useState([NumberButton.Display])
+  const [numerals, setNumerals] = useState(0)
   console.log('numerals: ', numerals); 
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
   // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
@@ -27,7 +27,7 @@ function App() {
       <div className="NumberPad">
         <div>
         <Specials/>
-        <Numbers/>
+        <Numbers display={setNumerals}/>
         </div>
         <div>
         <Operators/> 
@@ -37,7 +37,7 @@ function App() {
       
       <div className="App">
         <Logo />
-        <Display/> 
+        <Display display={numerals}/> 
         
         
       </div>

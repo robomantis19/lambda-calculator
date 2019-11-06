@@ -8,7 +8,7 @@ const Display = (props) => {
   // const [display, setDisplay] = useState([NumberButton]); 
   return (
       <div className="display">
-        {/* {display}  */}
+        {props.display}
   
   
       </div>

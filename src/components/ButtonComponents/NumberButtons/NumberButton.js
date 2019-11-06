@@ -3,8 +3,7 @@ import Display from '../../DisplayComponents/Display';
 
 
 const NumberButton = (props) => {
-  const [add, setAdd] = useState([])
-  console.log(add[0]); 
+  
 
    
 
@@ -12,7 +11,7 @@ const NumberButton = (props) => {
      
     <div className="Number">
       
-      <button className="button" onClick={() =>  setAdd( add => add += [props.button])}>
+      <button className="button" onClick={() => props.display(props.button)}>
          {props.button}
          
          
