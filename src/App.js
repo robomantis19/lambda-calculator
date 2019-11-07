@@ -13,41 +13,46 @@ import NumberButton from './components/ButtonComponents/NumberButtons/NumberButt
 import Logo from "./components/DisplayComponents/Logo";
 
 function App() {
-  const [numerals, setNumerals] = useState([])
-  const [operator, setOperator] = useState([])
-  const [calc, setCalc] = useState([])
-  console.log('numerals: ', numerals); 
+  const [display, setDisplay] = useState("");
+  
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
   // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
   // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   
-  const test = () => { 
-    return setOperator();
+  // const test = () => { 
+  //   return setOperator();
+  // }
+  const addOperator = (op) => { 
+    if(op ===  "="){
+      setDisplay(eval(display)); 
+    }else if(isNaN(op)){
+      setDisplay(display + " " + op + " ");
+    }else{ 
+      setDisplay(display + op);
+    }if( op === "C"){
+      setDisplay(eval(display * "0"))
+    }
   }
-  const addition = (operator) => { 
-    const previous = Number(numerals[1])
-    const array = [previous, Number(numerals), operator]
-    return [operator, numerals]
-  }
+  
   return (
     <div className="container">
       
       <div className="NumberPad">
         <div>
-        <Specials/>
-        <Numbers display={setNumerals}/>
+        <Specials setOperator={addOperator}/>
+        <Numbers display={addOperator}/>
         </div>
         <div>
-        <Operators test={test}/> 
+        <Operators setOperator={addOperator}/> 
         </div>
         
       </div> 
       
       <div className="App">
         <Logo />
-        <Display display={[addition,operator]}/> 
+        <Display display={display}/> 
         
         
       </div>

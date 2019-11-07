@@ -5,7 +5,7 @@ const OperatorButton = (props) => {
 
   return (
     <div className="Operator">
-      <button className="button" onClick={() => props.test(props.setOperator(props.button))}>
+      <button className="button" onClick={() => props.setOperator(props.value)}>
          {props.button}
       </button>
     </div>
