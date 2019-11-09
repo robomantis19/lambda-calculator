@@ -14,7 +14,8 @@ import Logo from "./components/DisplayComponents/Logo";
 
 function App() {
   const [display, setDisplay] = useState("");
-  
+  const [amount, setAmount] = useState(undefined);
+  const [operator, setOperator] = useState(undefined);
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
   // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
   // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
@@ -31,8 +32,24 @@ function App() {
       setDisplay(display + " " + op + " ");
     }else{ 
       setDisplay(display + op);
-    }if( op === "C"){
-      setDisplay(eval(display * "0"))
+    }
+  }
+  function specialButtonClick(itemData) {
+    const amt = amount ? amount : Number(display);
+
+    if (itemData === 'C') {
+      setAmount(() => undefined);
+      setDisplay(() => '');
+    }
+
+    if (itemData === '%') {
+      setAmount(() => amt / 100);
+      setDisplay(() => amt / 100);
+    }
+
+    if (itemData === '+/-') {
+      setAmount(() => -amt);
+      setDisplay(() => -amt);
     }
   }
   
@@ -41,7 +58,7 @@ function App() {
       
       <div className="NumberPad">
         <div>
-        <Specials setOperator={addOperator}/>
+        <Specials setOperator={specialButtonClick}/>
         <Numbers display={addOperator}/>
         </div>
         <div>
