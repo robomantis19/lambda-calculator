@@ -1,12 +1,16 @@
 .container {
+    margin: auto; 
     background-color: #c00025;
     width: 100%;
     max-width: 550px;
     border-radius: 15px;
     border: 2px solid grey;
     padding-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse; 
 }
 .display {
+    margin-left: 25px;
     margin-top: 25px;
     height: 100px;
     width: 450px;
@@ -20,3 +24,46 @@
     padding-right: 8%;
     font-size: 5.0rem;
   }
+
+.button{
+    width: 100px; 
+    height: 100px; 
+    border-radius: 2rem; 
+    background-color: blue; 
+    text-align: center; 
+    border: 3px solid darkblue;  
+}
+
+.NumberPad{
+    margin-left: 75px;
+    display: flex;
+    width: 600px;
+    
+}
+.specialDiv{
+    display: flex;
+    flex-direction: row; 
+}
+.numbersDiv{
+    width: 300px;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.operatorsDiv{
+    display: flex;
+    flex-direction: column;
+    
+}
+/* .NumberPad .Special{
+    display: flex; 
+    flex-direction: row-reverse; 
+    margin: 10px;
+    width: 200px; 
+}
+.Special button{
+    margin: 10px;
+     */
+/* } */
